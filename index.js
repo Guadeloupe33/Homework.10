@@ -5,7 +5,7 @@ const inquirer = require ('inquirer');
 function generateLogo(text, textColor, shape, shapeColor) {
     const svgMarkup = `
     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-    <rect width="100%" height="100%" fill="${shapeColor}" />
+    <${shape} width="100%" height="100%" fill="${shapeColor}" />
     <text x="10" y="150" fill="${textColor}" font-family="Arial" font-size="24">${text}</text>
   </svg>
   `;
@@ -31,8 +31,9 @@ inquirer
 },
 {
     type:'list',
-    name:'choose the shape',
-    choices: ['circle','triangle','square'],
+    name:'shape',
+    message: 'Select a shape',
+    choices: ['circle','triangle','rect'],
 
 
 },
