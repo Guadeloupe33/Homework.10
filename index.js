@@ -1,3 +1,4 @@
+const { error } = require('console');
 const fs = require('fs');
 const inquirer = require ('inquirer');
 
@@ -41,3 +42,6 @@ inquirer
     const{text, textColor, shape, shapeColor}= answers;
 
 })
+.catch ((error)=> {
+    console.error(error);
+});
