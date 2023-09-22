@@ -6,7 +6,6 @@ function generateLogo(text, textColor, shape, shapeColor) {
     const svgMarkup = `
     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
     <rect width="100%" height="100%" fill="${shapeColor}" />
-    <!-- Implement shape drawing here -->
     <text x="10" y="150" fill="${textColor}" font-family="Arial" font-size="24">${text}</text>
   </svg>
   `;
@@ -32,11 +31,16 @@ inquirer
 },
 {
     type:'list',
-    name:'shapeColor',
+    name:'choose the shape',
     choices: ['circle','triangle','square'],
 
 
 },
+{
+    type: 'input',
+    name: 'shapeColor',
+    message: 'Enter shape color (color keyword or hexadecimal):',
+  },
 ])
 .then ((answers) => {
     const{text, textColor, shape, shapeColor}= answers;
