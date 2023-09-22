@@ -24,5 +24,19 @@ inquirer
 
 } ,   
 },
+{
+    type: 'input',
+    name:'textColor',
+    message:"Enter text color (color keyword or Hexacdcimal"
+},
+{
+    type:'list',
+    name:'shapeColor',
+    choices: ['circle','triangle','square'],
 
+
+},
 ])
+.then ((answers) => {
+    const{text, textColor}
+}
