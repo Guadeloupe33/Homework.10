@@ -1,4 +1,4 @@
-const { error } = require('console');
+
 const fs = require('fs');
 const inquirer = require ('inquirer');
 
@@ -40,6 +40,7 @@ inquirer
 ])
 .then ((answers) => {
     const{text, textColor, shape, shapeColor}= answers;
+    generateLogo(text, textColor, shape,shapeColor)
 
 })
 .catch ((error)=> {
