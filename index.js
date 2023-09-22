@@ -38,5 +38,6 @@ inquirer
 },
 ])
 .then ((answers) => {
-    const{text, textColor}
-}
+    const{text, textColor, shape, shapeColor}= answers;
+
+})
