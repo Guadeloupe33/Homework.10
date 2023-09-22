@@ -12,3 +12,17 @@ function generateLogo(text, textColor, shape, shapeColor) {
   fs.writeFileSync('logo.svg', svgMarkup);
   console.log('Generated logo.svg');
 }
+inquirer
+.prompt ([
+    {
+        type: 'input',
+        name:'text',
+        message:'Enter up to 3 characters',
+        validated: function (input)
+{
+    return input.lenght <=3;
+
+} ,   
+},
+
+])
